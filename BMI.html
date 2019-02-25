@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<label for="weight">Chỉ số cân nặng của bạn là : </label><input type="number" id="weight">
+<br><br>
+<label for="height">Chỉ số chiều cao của bạn là : </label><input type="number" id="height">
+<hr>
+<button id="Input" onclick="C()">Kiểm tra BMI</button>
+<body>
+<script>
+    function C() {
+        let x = document.getElementById("weight").value;
+        let y = document.getElementById("height").value;
+        let BMI = x/(y*y);
+        if (BMI < 18.5){alert("Underweight")}
+        else if (18.5 <= BMI < 25 ){alert("Normal")}
+        else if (25 <= BMI < 30){alert("Overweight")}
+        else if (30 <= BMI){alert("Obese")}
+    }
+</script>
+</body>
+</html>
